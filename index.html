@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DavintoTech Solutions</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DavintoTech Solutions | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
@@ -21,8 +21,7 @@
       color: gold !important;
     }
     .hero {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34') center/cover;
+      background: url('assets/hero.jpg') no-repeat center center/cover;
       height: 90vh;
       display: flex;
       align-items: center;
@@ -32,10 +31,11 @@
     }
     .hero h1 {
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: bold;
     }
     .hero p {
       font-size: 1.2rem;
+      margin-bottom: 20px;
     }
     .btn-gold {
       background-color: gold;
@@ -47,28 +47,42 @@
     }
     .section-title {
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 4rem 0 2rem;
     }
-    .newsletter input {
-      max-width: 400px;
+    .newsletter {
+      background-color: #111;
+      padding: 40px;
+      border: 1px solid gold;
+      border-radius: 10px;
+      text-align: center;
     }
-    footer {
-      padding: 20px;
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
+  <audio autoplay loop hidden>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/2348169045105" target="_blank" class="btn btn-success floating-whatsapp">
+    Chat on WhatsApp
+  </a>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="#">DavintoTech</a>
+      <a class="navbar-brand" href="index.html">DavintoTech</a>
       <button class="navbar-toggler bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon bg-light"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link text-light" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link text-light" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link text-light" href="portfolio.html">Portfolio</a></li>
@@ -79,77 +93,57 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="container">
-      <h1>Welcome to DavintoTech Solutions</h1>
-      <p>Your trusted partner in Web Development, Writing, and Tech Services.</p>
-      <a href="contact.html" class="btn btn-gold mt-3">Get In Touch</a>
+    <div>
+      <h1>Empowering Ideas with Tech</h1>
+      <p>Web Development • Creative Writing • Tech Services</p>
+      <a href="services.html" class="btn btn-gold me-2">Our Services</a>
+      <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
     </div>
   </section>
 
-  <!-- Services Preview -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <h4>💻 Web Development</h4>
-          <p>Stunning websites, built fast and responsive using modern tech.</p>
-        </div>
-        <div class="col-md-4">
-          <h4>📝 Writing</h4>
-          <p>High-quality content writing for blogs, tech, scripts, and more.</p>
-        </div>
-        <div class="col-md-4">
-          <h4>🔧 Tech Support</h4>
-          <p>General tech services to help you stay ahead in the digital age.</p>
-        </div>
+  <!-- Testimonials Preview -->
+  <section class="container my-5">
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote>“Excellent work and delivered faster than expected.”</blockquote>
+        <p>- Tolu A.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="py-5 bg-dark text-light">
-    <div class="container">
-      <h2 class="section-title">What Clients Say</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <blockquote>
-            "DavintoTech built my website fast and perfectly. Highly recommend!"
-            <footer class="blockquote-footer text-white">— A Happy Client</footer>
-          </blockquote>
-        </div>
-        <div class="col-md-6">
-          <blockquote>
-            "Professional, reliable, and skilled. A one-stop tech solution."
-            <footer class="blockquote-footer text-white">— Satisfied Customer</footer>
-          </blockquote>
-        </div>
+      <div class="col-md-4">
+        <blockquote>“DavintoTech transformed my vision into a real website.”</blockquote>
+        <p>- Jessica U.</p>
+      </div>
+      <div class="col-md-4">
+        <blockquote>“I love the design and how responsive the site is.”</blockquote>
+        <p>- Emeka K.</p>
       </div>
     </div>
   </section>
 
   <!-- Newsletter -->
-  <section class="py-5">
-    <div class="container text-center newsletter">
-      <h3>Subscribe to Our Newsletter</h3>
-      <p>Get the latest updates, blog posts, and special offers.</p>
-      <form class="d-flex flex-column align-items-center">
-        <input type="email" class="form-control mb-3" placeholder="Enter your email" />
-        <button type="submit" class="btn btn-gold">Subscribe</button>
-      </form>
-    </div>
+  <section class="newsletter container mb-5">
+    <h2 class="mb-3">Subscribe to Our Tech Updates</h2>
+    <form>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Enter your email" required />
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-gold w-100">Subscribe</button>
+        </div>
+      </div>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer class="text-center text-light">
     <p>&copy; 2025 DavintoTech Solutions. All Rights Reserved.</p>
-    <p>📧 <a href="mailto:davintotech@gmail.com" class="text-warning">davintotech@gmail.com</a> | 📞 <a href="https://wa.me/2348169045105" class="text-warning">WhatsApp</a></p>
     <p>
-      <a href="about.html" class="text-light me-2">About</a> |
       <a href="faq.html" class="text-light me-2">FAQ</a> |
-      <a href="pricing.html" class="text-light">Pricing</a>
+      <a href="pricing.html" class="text-light me-2">Pricing</a> |
+      <a href="terms.html" class="text-light">Terms</a>
     </p>
   </footer>
 
